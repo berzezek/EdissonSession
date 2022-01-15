@@ -1,0 +1,21 @@
+{% extends "edison/base.html" %}
+{% block content %}
+    <form method="post" action="" class='bg-light rounded shadow mt-5 p-5'>
+        <div class="text-center">
+            <p>Наши экстрасенсы предпологают, что это могут быть:</p>
+
+            {% for i in data %}
+            <span class="display-5">
+                {{ i.psy_number }} 
+            </span>
+            {% endfor %}
+        </div>
+        <hr class="my-5"/>
+        <div class="text-center">
+            {% csrf_token %}
+            <label for="user_num" class="text-muted mb-2">Введите двузначное число, загаданное Вами ранее</label>
+            <input type='number' id="user_num" name="user_num" class='form-control me-2' min="10" max ="99" /> 
+            <input type='submit' class="btn btn-primary mt-2" value="Ввести" />   
+        </div>
+    </form>
+{% endblock %}

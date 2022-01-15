@@ -1,0 +1,24 @@
+{% extends "edison/base.html" %}
+{% block content %}
+<table class="table text-center mt-5">
+    <thead>
+      <tr>
+        <th scope="col">User Number</th>
+        <th scope="col">Date</th>
+        <th scope="col">Psychic - 1</th>
+        <th scope="col">Psychic - 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in data %}
+      <tr>
+        <td>{{ i.user_num }}</td>
+        <td>{{ i.user_num_created_at }}</td>
+        <td>{{ i.psy1_num }}</td>
+        <td>{{ i.psy2_num }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

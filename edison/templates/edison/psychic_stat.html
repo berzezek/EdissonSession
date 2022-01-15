@@ -1,0 +1,22 @@
+{% extends "edison/base.html" %}
+{% block content %}
+<table class="table text-center mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Psychic name</th>
+        <th scope="col">Attempt</th>
+        <th scope="col">Credibility</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in data %}
+      <tr>
+        <td>{{ i.title }}</td>
+        <td>{{ i.attempt }}</td>
+        <td>{{ i.credibility }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
